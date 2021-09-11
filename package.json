@@ -1,6 +1,6 @@
 {
-  "name": "nextjs",
-  "version": "4.0.0",
+  "name": "muhammad-fakhri-portfolio-web",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "latest",
@@ -13,7 +13,7 @@
     "react": "latest",
     "react-dom": "latest",
     "react-typed": "^1.2.0",
-    "simple-icons": "^4.11.0",
+    "simple-icons": "^5.13.0",
     "webpack": "^4.46.0"
   },
   "scripts": {

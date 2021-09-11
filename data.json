@@ -1,132 +1,260 @@
 {
-    "name": "Kaustubh Odak",
+    "name": "Muhammad Fakhri",
     "landing": {
-        "title": "Hi, I'm Kaustubh",
+        "title": "Hi, I'm Muhammad Fakhri",
         "subtitles": [
-            "Full-stack developer 🌐",
-            "Cross-platform developer 📱💻",
-            "Exploring cloud ☁️",
-            "Beginner in devops ♾️",
-            "Just getting started 📈"
+            "Software engineer 💻",
+            "Web developer 🌐",
+            "Mobile app developer 📱",
+            "Cloud tech enthusiast ☁️",
+            "Devops learner ♾️"
         ],
         "professionalDetails": [
             {
-                "alt": "kaustubh-odak",
+                "alt": "muhammad-fakhri",
                 "icon": "linkedin",
-                "link": "https://www.linkedin.com/in/kaustubh-odak/"
+                "link": "https://www.linkedin.com/in/muhammad-fakhri/"
             },
             {
-                "alt": "kausko",
-                "icon": "stackoverflow",
-                "link": "https://stackoverflow.com/users/15832433/kausko"
-            },
-            {
-                "alt": "kausko",
+                "alt": "muhammad-fakhri",
                 "icon": "github",
-                "link": "https://github.com/kausko"
+                "link": "https://github.com/muhammad-fakhri"
             },
             {
                 "alt": "Email",
                 "icon": "gmail",
-                "link": "mailto:iam@kaustubhodak.me,kaustubhodak1@gmail.com"
+                "link": "mailto:fakhri@nyxordinal.tech,muhammadfakhri301@gmail.com"
             }
         ]
     },
     "skills": {
         "Languages known": [
-            "JavaScript", "Java", "C++", "Python", "HTML5", "CSS3", "TypeScript", "Kotlin", "Dart"
+            "Java",
+            "PHP",
+            "Python",
+            "C++",
+            "C",
+            "Go",
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "TypeScript"
         ],
         "Frontend": [
-            "React", "Redux", "Next.js", "Gatsby", "Netlify", "Vercel", "Material-UI", "antdesign", "Bootstrap"
+            "React",
+            {
+                "alt": "Next.js",
+                "icon": "nextdotjs"
+            },
+            "Laravel",
+            "Django",
+            "Netlify",
+            "Vercel",
+            {
+                "alt": "Material-UI",
+                "icon": "materialui"
+            },
+            "Bootstrap"
         ],
         "Backend, Database and Cloud": [
-            "Node.js", "Express", "FastAPI", "MongoDB", "MySQL", "PostgreSQL", 
-            { 
-                "alt": "Azure", 
-                "icon": "microsoftazure" 
-            }, 
-            "Heroku", "Firebase"
+            {
+                "alt": "Node.js",
+                "icon": "nodedotjs"
+            },
+            "Express",
+            "Redis",
+            "Nodemon",
+            "PM2",
+            "Lumen",
+            "MongoDB",
+            "MySQL",
+            "MariaDB",
+            "PostgreSQL",
+            {
+                "alt": "Spring Boot",
+                "icon": "springboot"
+            },
+            {
+                "alt": "Google Cloud",
+                "icon": "googlecloud"
+            },
+            "Heroku",
+            "Firebase",
+            "Docker",
+            "Kubernetes"
         ],
         "Mobile": [
+            "Android",
             {
-                "alt": "React_Native",
-                "icon": "react",
-                "backgroundColor": "#424242"
+                "alt": "Android Studio",
+                "icon": "androidstudio"
             },
-            "Expo", "Android", "Flutter"
+            "Ionic",
+            "Flutter"
         ]
     },
     "projects": {
-        "baseURI": "https://api.github.com/repos/kausko/",
+        "baseURI": "https://api.github.com/repos/muhammad-fakhri/",
         "repositories": [
-            "Genrealize",
-            "Portfolio",
-            "cosmicom",
-            "Discord-Google-Drive-Bot",
-            "GitHits",
-            "1DBM"
+            "sipp-karhutla",
+            "bfubupi-be",
+            "psn2020-backend",
+            "aesir-laravel",
+            "Bareng.in",
+            "I-Best"
         ]
     },
     "experience": {
         "Work Experience": [
             {
-                "organization": "CloudDFN LLP",
-                "role": "Full Stack Developer",
+                "organization": "CIMB Niaga",
+                "role": "Software Engineer",
                 "type": "Internship",
-                "startDate": "2020-07-20",
-                "endDate": "2021-01-20",
-                "city": "Mumbai",
-                "state": "Maharashtra",
-                "country": "India",
-                "url": "https://www.linkedin.com/company/clouddfn-llp/",
-                "thumbnail": "/CDFN.jfif"
+                "startDate": "2020-11-09",
+                "endDate": "2021-05-08",
+                "city": "Jakarta",
+                "state": "Greater Jakarta",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/pt--bank-cimb-niaga-tbk/",
+                "thumbnail": "/cimb.png"
+            },
+            {
+                "organization": "Shopee Indonesia",
+                "role": "Software Engineer",
+                "type": "Internship",
+                "startDate": "2020-12-01",
+                "endDate": "2021-02-28",
+                "city": "Central Jakarta",
+                "state": "Greater Jakarta",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/shopee/",
+                "thumbnail": "/shopee.jfif"
+            },
+            {
+                "organization": "LingoTalk",
+                "role": "Senior Software Engineer",
+                "type": "Internship",
+                "startDate": "2020-10-15",
+                "endDate": "2021-01-08",
+                "city": "South Jakarta",
+                "state": "Greater Jakarta",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/lingotalklc/",
+                "thumbnail": "/lingotalk.jfif"
+            },
+            {
+                "organization": "Codepanda",
+                "role": "Lead",
+                "type": "Freelance",
+                "startDate": "2020-10-17",
+                "endDate": "",
+                "city": "Bogor",
+                "state": "West Java",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/codepanda/",
+                "thumbnail": "/codepanda.png"
+            },
+            {
+                "organization": "Codepanda",
+                "role": "Software Engineer",
+                "type": "Freelance",
+                "startDate": "2019-12-01",
+                "endDate": "2020-10-10",
+                "city": "Bogor",
+                "state": "West Java",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/codepanda/",
+                "thumbnail": "/codepanda.png"
+            },
+            {
+                "organization": "IPB University",
+                "role": "Computer Lab Assistant",
+                "type": "Part-time",
+                "startDate": "2019-09-01",
+                "endDate": "2021-01-31",
+                "city": "Bogor",
+                "state": "West Java",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/ipb-university/",
+                "thumbnail": "/ipb.jfif"
+            },
+            {
+                "organization": "Shopee Indonesia",
+                "role": "Software Engineer",
+                "type": "Full-time",
+                "startDate": "2021-04-01",
+                "endDate": "",
+                "city": "Central Jakarta",
+                "state": "Greater Jakarta",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/shopee/",
+                "thumbnail": "/shopee.jfif"
             }
         ],
         "Volunteer Experience": [
             {
-                "organization": "PICT IEEE Student Branch (PISB)",
-                "role": "Technical Head",
+                "organization": "IT Today IPB",
+                "role": "Head of Secretarial Division",
                 "type": "Member",
-                "startDate": "2019-07-01",
-                "endDate": "",
-                "city": "Pune",
-                "state": "Maharashtra",
-                "country": "India",
-                "url": "https://www.linkedin.com/company/pisbieee/",
-                "thumbnail": "/PISB.jfif"
+                "startDate": "2019-02-26",
+                "endDate": "2019-09-08",
+                "city": "Bogor",
+                "state": "West Java",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/it-today-ipb/",
+                "thumbnail": "/ittoday.jfif"
             },
             {
-                "organization": "Pictoreal",
-                "role": "Technical Head",
+                "organization": "Himpunan Mahasiswa Ilmu Komputer Institut Pertanian Bogor",
+                "role": "Staff of Education Division",
                 "type": "Member",
-                "startDate": "2019-07-01",
-                "endDate": "2021-04-01",
-                "city": "Pune",
-                "state": "Maharashtra",
-                "country": "India",
-                "url": "https://www.linkedin.com/company/pictoreal/",
-                "thumbnail": "/Picto.jfif"
+                "startDate": "2018-12-01",
+                "endDate": "2019-11-01",
+                "city": "Bogor",
+                "state": "West Java",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/himalkomipb/",
+                "thumbnail": "/himalkomipb.jfif"
+            },
+            {
+                "organization": "IPB's Informatics Innovation Festival (ICONFEST)",
+                "role": "Competition Division",
+                "type": "Member",
+                "startDate": "2019-02-20",
+                "endDate": "2019-05-10",
+                "city": "Bogor",
+                "state": "West Java",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/ipb-s-informatics-competition-icon/",
+                "thumbnail": "/icon.jfif"
+            },
+            {
+                "organization": "IEEE IPB Student Branch",
+                "role": "Chair",
+                "type": "Member",
+                "startDate": "2020-02-01",
+                "endDate": "2020-11-04",
+                "city": "Bogor",
+                "state": "West Java",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/ieeesbipb/",
+                "thumbnail": "/ieeesbipb.jfif"
             }
         ]
     },
     "about": {
-        "description": "I am a full-stack cross-platform app developer, pursuing my B.E in Computer Engineering from Pune Institute of Computer Technology. I strive to make meaningful applications with the best UI practices.",
+        "description": "I am a software engineer with a significant interest in Web and Mobile Application Development. I enjoy being involved in many projects to improve my technical proficiency and gaining relevant experience in the information technology industry. I love to learn new things and share them with other people, especially on software development topics.",
         "picture": "/profile.jpg",
         "social": [
             {
-                "alt": "kaustubh._.o",
+                "alt": "muhammd_fakhri",
                 "icon": "instagram",
-                "link": "https://www.instagram.com/kaustubh._.o/"
+                "link": "https://www.instagram.com/muhammd_fakhri/"
             },
             {
-                "alt": "KO_272",
+                "alt": "muhammd_fakhri",
                 "icon": "twitter",
-                "link": "https://twitter.com/KO_272"
-            },
-            {
-                "alt": "kaustubh#4489",
-                "icon": "discord",
-                "link": "https://discord.com/"
+                "link": "https://twitter.com/muhammd_fakhri"
             }
         ]
     },
