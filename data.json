@@ -1,0 +1,281 @@
+{
+    "name": "Muhammad Fakhri",
+    "landing": {
+        "title": "Hi, I'm Muhammad Fakhri",
+        "subtitles": [
+            "Software engineer 💻",
+            "Web developer 🌐",
+            "Mobile app developer 📱",
+            "Cloud tech enthusiast ☁️",
+            "Devops learner ♾️"
+        ],
+        "professionalDetails": [
+            {
+                "alt": "muhammad-fakhri",
+                "icon": "linkedin",
+                "link": "https://www.linkedin.com/in/muhammad-fakhri/"
+            },
+            {
+                "alt": "muhammad-fakhri",
+                "icon": "github",
+                "link": "https://github.com/muhammad-fakhri"
+            },
+            {
+                "alt": "Email",
+                "icon": "gmail",
+                "link": "mailto:muhammadfakhri301@gmail.com"
+            }
+        ]
+    },
+    "skills": {
+        "Languages known": [
+            "Java",
+            "PHP",
+            "Python",
+            "C++",
+            "C",
+            "Go",
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "TypeScript"
+        ],
+        "Frontend": [
+            "React",
+            {
+                "alt": "Next.js",
+                "icon": "nextdotjs"
+            },
+            "Laravel",
+            "Django",
+            "Netlify",
+            "Vercel",
+            {
+                "alt": "Material-UI",
+                "icon": "materialui"
+            },
+            "Bootstrap"
+        ],
+        "Backend, Database and Cloud": [
+            {
+                "alt": "Node.js",
+                "icon": "nodedotjs"
+            },
+            "Express",
+            "Redis",
+            "Nodemon",
+            "PM2",
+            "Lumen",
+            "MongoDB",
+            "MySQL",
+            "MariaDB",
+            "PostgreSQL",
+            {
+                "alt": "Spring Boot",
+                "icon": "springboot"
+            },
+            {
+                "alt": "Google Cloud",
+                "icon": "googlecloud"
+            },
+            "Heroku",
+            "Firebase",
+            "Docker",
+            "Kubernetes"
+        ],
+        "Mobile": [
+            "Android",
+            {
+                "alt": "Android Studio",
+                "icon": "androidstudio"
+            },
+            "Ionic",
+            "Flutter"
+        ]
+    },
+    "projects": {
+        "baseURI": "https://api.github.com/repos/muhammad-fakhri/",
+        "repositories": [
+            "sipp-karhutla",
+            "bfubupi-be",
+            "psn2020-backend",
+            "aesir-laravel",
+            "Bareng.in",
+            "I-Best"
+        ]
+    },
+    "experience": {
+        "Work Experience": [
+            {
+                "organization": "CIMB Niaga",
+                "role": "Software Engineer",
+                "type": "Internship",
+                "startDate": "2020-11-09",
+                "endDate": "2021-05-08",
+                "city": "Jakarta",
+                "state": "Greater Jakarta",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/pt--bank-cimb-niaga-tbk/",
+                "thumbnail": "/cimb.png"
+            },
+            {
+                "organization": "Shopee Indonesia",
+                "role": "Software Engineer",
+                "type": "Internship",
+                "startDate": "2020-12-01",
+                "endDate": "2021-02-28",
+                "city": "Central Jakarta",
+                "state": "Greater Jakarta",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/shopee/",
+                "thumbnail": "/shopee.jfif"
+            },
+            {
+                "organization": "LingoTalk",
+                "role": "Senior Software Engineer",
+                "type": "Internship",
+                "startDate": "2020-10-15",
+                "endDate": "2021-01-08",
+                "city": "South Jakarta",
+                "state": "Greater Jakarta",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/lingotalklc/",
+                "thumbnail": "/lingotalk.jfif"
+            },
+            {
+                "organization": "Codepanda",
+                "role": "Lead",
+                "type": "Freelance",
+                "startDate": "2020-10-17",
+                "endDate": "",
+                "city": "Bogor",
+                "state": "West Java",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/codepanda/",
+                "thumbnail": "/codepanda.png"
+            },
+            {
+                "organization": "Codepanda",
+                "role": "Software Engineer",
+                "type": "Freelance",
+                "startDate": "2019-12-01",
+                "endDate": "2020-10-10",
+                "city": "Bogor",
+                "state": "West Java",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/codepanda/",
+                "thumbnail": "/codepanda.png"
+            },
+            {
+                "organization": "IPB University",
+                "role": "Computer Lab Assistant",
+                "type": "Part-time",
+                "startDate": "2019-09-01",
+                "endDate": "2021-01-31",
+                "city": "Bogor",
+                "state": "West Java",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/ipb-university/",
+                "thumbnail": "/ipb.jfif"
+            },
+            {
+                "organization": "Shopee Indonesia",
+                "role": "Software Engineer",
+                "type": "Full-time",
+                "startDate": "2021-04-01",
+                "endDate": "",
+                "city": "Central Jakarta",
+                "state": "Greater Jakarta",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/shopee/",
+                "thumbnail": "/shopee.jfif"
+            }
+        ],
+        "Volunteer Experience": [
+            {
+                "organization": "IT Today IPB",
+                "role": "Head of Secretarial Division",
+                "type": "Member",
+                "startDate": "2019-02-26",
+                "endDate": "2019-09-08",
+                "city": "Bogor",
+                "state": "West Java",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/it-today-ipb/",
+                "thumbnail": "/ittoday.jfif"
+            },
+            {
+                "organization": "Himpunan Mahasiswa Ilmu Komputer Institut Pertanian Bogor",
+                "role": "Staff of Education Division",
+                "type": "Member",
+                "startDate": "2018-12-01",
+                "endDate": "2019-11-01",
+                "city": "Bogor",
+                "state": "West Java",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/himalkomipb/",
+                "thumbnail": "/himalkomipb.jfif"
+            },
+            {
+                "organization": "IPB's Informatics Innovation Festival (ICONFEST)",
+                "role": "Competition Division",
+                "type": "Member",
+                "startDate": "2019-02-20",
+                "endDate": "2019-05-10",
+                "city": "Bogor",
+                "state": "West Java",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/ipb-s-informatics-competition-icon/",
+                "thumbnail": "/icon.jfif"
+            },
+            {
+                "organization": "IEEE IPB Student Branch",
+                "role": "Chair",
+                "type": "Member",
+                "startDate": "2020-02-01",
+                "endDate": "2020-11-04",
+                "city": "Bogor",
+                "state": "West Java",
+                "country": "Indonesia",
+                "url": "https://www.linkedin.com/company/ieeesbipb/",
+                "thumbnail": "/ieeesbipb.jfif"
+            }
+        ]
+    },
+    "about": {
+        "description": "I am a software engineer with a significant interest in Web and Mobile Application Development. I enjoy being involved in many projects to improve my technical proficiency and gaining relevant experience in the information technology industry. I love to learn new things and share them with other people, especially on software development topics.",
+        "picture": "/profile.jpg",
+        "social": [
+            {
+                "alt": "muhammd_fakhri",
+                "icon": "instagram",
+                "link": "https://www.instagram.com/muhammd_fakhri/"
+            },
+            {
+                "alt": "muhammd_fakhri",
+                "icon": "twitter",
+                "link": "https://twitter.com/muhammd_fakhri"
+            }
+        ]
+    },
+    "theme": {
+        "light": {
+            "palette": {
+                "type": "light",
+                "background": {
+                    "paper": "#fff",
+                    "default": "#fafafa"
+                }
+            }
+        },
+        "dark": {
+            "palette": {
+                "type": "dark",
+                "background": {
+                    "paper": "#303030",
+                    "default": "#212121"
+                }
+            }
+        }
+    }
+}
