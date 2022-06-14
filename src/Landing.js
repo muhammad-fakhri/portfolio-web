@@ -98,7 +98,7 @@ export default function Landing() {
           <Fade in={true} style={{ transitionDelay: '100ms' }}>
             <Grid item lg={6}>
               <Image
-                src="https://storage.googleapis.com/dicoding-gcloud/landing.svg"
+                src="https://storage.googleapis.com/dicoding-gcloud/landing.png"
                 alt="Landing"
                 width="900.94"
                 height="787"

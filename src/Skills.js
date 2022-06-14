@@ -87,7 +87,7 @@ export default function Skills() {
               <div>
                 <Image
                   alt="Skills"
-                  src="https://storage.googleapis.com/dicoding-gcloud/skill.svg"
+                  src="https://storage.googleapis.com/dicoding-gcloud/skill.png"
                   width="1139"
                   height="655"
                 />

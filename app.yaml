@@ -2,13 +2,8 @@ env: standard
 runtime: nodejs14
 service: default
 env_variables:
-  PAT: ""
+  PAT: ''
 handlers:
-  - url: /(.*\.svg)
-    static_dir: public/
-    mime_type: image/svg+xml
-    http_headers:
-      content-type: image/svg+xml
   - url: /.*
     secure: always
     script: auto

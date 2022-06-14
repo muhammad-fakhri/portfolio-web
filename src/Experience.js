@@ -90,7 +90,7 @@ export default function Experience() {
               <div>
                 <Image
                   alt="Experience"
-                  src="https://storage.googleapis.com/dicoding-gcloud/experience.svg"
+                  src="https://storage.googleapis.com/dicoding-gcloud/experience.png"
                   width="996.46"
                   height="828.18"
                 />

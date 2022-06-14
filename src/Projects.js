@@ -55,7 +55,7 @@ export default function Projects({ data }) {
               <div>
                 <Image
                   alt="Projects"
-                  src="https://storage.googleapis.com/dicoding-gcloud/projects.svg"
+                  src="https://storage.googleapis.com/dicoding-gcloud/projects.png"
                   width="1144"
                   height="617.32"
                 />
