@@ -1,0 +1,4 @@
+# Next.js source code
+.git/
+/pages/
+/src/

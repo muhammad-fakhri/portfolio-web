@@ -1,0 +1,9 @@
+env: standard
+runtime: nodejs14
+service: default
+env_variables:
+  PAT: ""
+handlers:
+  - url: /.*
+    secure: always
+    script: auto
