@@ -12,18 +12,13 @@
         "professionalDetails": [
             {
                 "alt": "muhammad-fakhri",
-                "icon": "linkedin",
-                "link": "https://www.linkedin.com/in/muhammad-fakhri/"
-            },
-            {
-                "alt": "muhammad-fakhri",
                 "icon": "github",
                 "link": "https://github.com/muhammad-fakhri"
             },
             {
                 "alt": "Email",
                 "icon": "gmail",
-                "link": "mailto:fakhri@nyxordinal.tech,muhammadfakhri301@gmail.com"
+                "link": "mailto:muhammadfakhri301@gmail.com"
             }
         ]
     },
@@ -107,42 +102,6 @@
     "experience": {
         "Work Experience": [
             {
-                "organization": "CIMB Niaga",
-                "role": "Software Engineer",
-                "type": "Internship",
-                "startDate": "2020-11-09",
-                "endDate": "2021-05-08",
-                "city": "Jakarta",
-                "state": "Greater Jakarta",
-                "country": "Indonesia",
-                "url": "https://www.linkedin.com/company/pt--bank-cimb-niaga-tbk/",
-                "thumbnail": "/cimb.png"
-            },
-            {
-                "organization": "Shopee Indonesia",
-                "role": "Software Engineer",
-                "type": "Internship",
-                "startDate": "2020-12-01",
-                "endDate": "2021-02-28",
-                "city": "Central Jakarta",
-                "state": "Greater Jakarta",
-                "country": "Indonesia",
-                "url": "https://www.linkedin.com/company/shopee/",
-                "thumbnail": "/shopee.jfif"
-            },
-            {
-                "organization": "LingoTalk",
-                "role": "Senior Software Engineer",
-                "type": "Internship",
-                "startDate": "2020-10-15",
-                "endDate": "2021-01-08",
-                "city": "South Jakarta",
-                "state": "Greater Jakarta",
-                "country": "Indonesia",
-                "url": "https://www.linkedin.com/company/lingotalklc/",
-                "thumbnail": "/lingotalk.jfif"
-            },
-            {
                 "organization": "Codepanda",
                 "role": "Lead",
                 "type": "Freelance",
@@ -177,18 +136,6 @@
                 "country": "Indonesia",
                 "url": "https://www.linkedin.com/company/ipb-university/",
                 "thumbnail": "/ipb.jfif"
-            },
-            {
-                "organization": "Shopee Indonesia",
-                "role": "Software Engineer",
-                "type": "Full-time",
-                "startDate": "2021-04-01",
-                "endDate": "",
-                "city": "Central Jakarta",
-                "state": "Greater Jakarta",
-                "country": "Indonesia",
-                "url": "https://www.linkedin.com/company/shopee/",
-                "thumbnail": "/shopee.jfif"
             }
         ],
         "Volunteer Experience": [
