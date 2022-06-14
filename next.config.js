@@ -1,4 +1,4 @@
-const withPWA = require('next-pwa')
+const withPWA = require('next-pwa');
 
 module.exports = withPWA({
   pwa: {
@@ -6,7 +6,7 @@ module.exports = withPWA({
     dest: 'public',
   },
   images: {
-    domains: ['media-exp1.licdn.com'],
+    domains: ['media-exp1.licdn.com', 'storage.googleapis.com'],
   },
   distDir: 'build',
 });

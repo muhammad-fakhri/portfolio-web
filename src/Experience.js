@@ -73,90 +73,114 @@ export default function Experience() {
     }, [])
 
     return (
-        <Grid direction="row" container justify="center" alignItems="center" spacing={10} className={classes.cont}>
-            <Grid item xs={12} lg={6}>
-                <Typography variant="h2" gutterBottom align="center">
-                    Experience
-                </Typography>
-                <Hidden mdDown>
-                    <Fade in={animate} style={{ transitionDelay: '250ms' }}>
-                        <div>
-                            <Image
-                                alt="Experience"
-                                src="/experience.svg"
-                                width="996.46"
-                                height="828.18"
-                            />
-                        </div>
-                    </Fade>
-                </Hidden>
-            </Grid>
-            <Grid container item xs={12} lg={6} direction="column" spacing={1} alignItems={align}>
-                {
-                    Object.getOwnPropertyNames(experience).map((title, id) =>
-                        <Grid item key={id} className={classes.expObj}>
-                            <Typography variant="h4" align={textAlign} gutterBottom component="p">
-                                {title}
-                            </Typography>
-                            <Grid container item direction="row" spacing={1} justify="center">
-                                {
-                                    experience[title].map(({
-                                        organization,
-                                        role,
-                                        type,
-                                        startDate,
-                                        endDate,
-                                        city,
-                                        state,
-                                        country,
-                                        url,
-                                        thumbnail
-                                    }, i) =>
-                                        <Grid item xs={12} sm key={i}>
-                                            <Fade in={animate} style={{ transitionDelay: `${200 * i}ms` }}>
-                                                <Card className={classes.card}>
-                                                    <CardActionArea
-                                                        className={classes.cardActionArea}
-                                                        href={url}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                    >
-                                                        <CardHeader
-                                                            avatar={
-                                                                <Avatar variant="rounded">
-                                                                    <Image
-                                                                        alt={`${organization} logo`}
-                                                                        src={thumbnail}
-                                                                        layout="fill"
-                                                                    />
-                                                                </Avatar>
-                                                            }
-                                                            title={organization}
-                                                            subheader={role + " - " + type}
-                                                        />
-                                                        <CardHeader
-                                                            avatar={<DateRange />}
-                                                            title={getHumanDiff(startDate, endDate)}
-                                                            subheader={`${startDate} - ${endDate}`}
-                                                            className={classes.cardHeader}
-                                                        />
-                                                        <CardHeader
-                                                            avatar={<LocationCity />}
-                                                            subheader={`${city}, ${state}, ${country}`}
-                                                            className={classes.cardHeader}
-                                                        />
-                                                    </CardActionArea>
-                                                </Card>
-                                            </Fade>
-                                        </Grid>
-                                    )
-                                }
-                            </Grid>
-                        </Grid>
-                    )
-                }
-            </Grid>
-            <div ref={animRef}></div>
+      <Grid
+        direction="row"
+        container
+        justify="center"
+        alignItems="center"
+        spacing={10}
+        className={classes.cont}
+      >
+        <Grid item xs={12} lg={6}>
+          <Typography variant="h2" gutterBottom align="center">
+            Experience
+          </Typography>
+          <Hidden mdDown>
+            <Fade in={animate} style={{ transitionDelay: '250ms' }}>
+              <div>
+                <Image
+                  alt="Experience"
+                  src="https://storage.googleapis.com/dicoding-gcloud/experience.svg"
+                  width="996.46"
+                  height="828.18"
+                />
+              </div>
+            </Fade>
+          </Hidden>
         </Grid>
-    )
+        <Grid
+          container
+          item
+          xs={12}
+          lg={6}
+          direction="column"
+          spacing={1}
+          alignItems={align}
+        >
+          {Object.getOwnPropertyNames(experience).map((title, id) => (
+            <Grid item key={id} className={classes.expObj}>
+              <Typography
+                variant="h4"
+                align={textAlign}
+                gutterBottom
+                component="p"
+              >
+                {title}
+              </Typography>
+              <Grid container item direction="row" spacing={1} justify="center">
+                {experience[title].map(
+                  (
+                    {
+                      organization,
+                      role,
+                      type,
+                      startDate,
+                      endDate,
+                      city,
+                      state,
+                      country,
+                      url,
+                      thumbnail,
+                    },
+                    i
+                  ) => (
+                    <Grid item xs={12} sm key={i}>
+                      <Fade
+                        in={animate}
+                        style={{ transitionDelay: `${200 * i}ms` }}
+                      >
+                        <Card className={classes.card}>
+                          <CardActionArea
+                            className={classes.cardActionArea}
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <CardHeader
+                              avatar={
+                                <Avatar variant="rounded">
+                                  <Image
+                                    alt={`${organization} logo`}
+                                    src={thumbnail}
+                                    layout="fill"
+                                  />
+                                </Avatar>
+                              }
+                              title={organization}
+                              subheader={role + ' - ' + type}
+                            />
+                            <CardHeader
+                              avatar={<DateRange />}
+                              title={getHumanDiff(startDate, endDate)}
+                              subheader={`${startDate} - ${endDate}`}
+                              className={classes.cardHeader}
+                            />
+                            <CardHeader
+                              avatar={<LocationCity />}
+                              subheader={`${city}, ${state}, ${country}`}
+                              className={classes.cardHeader}
+                            />
+                          </CardActionArea>
+                        </Card>
+                      </Fade>
+                    </Grid>
+                  )
+                )}
+              </Grid>
+            </Grid>
+          ))}
+        </Grid>
+        <div ref={animRef}></div>
+      </Grid>
+    );
 }

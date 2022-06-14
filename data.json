@@ -111,7 +111,7 @@
                 "state": "West Java",
                 "country": "Indonesia",
                 "url": "https://www.linkedin.com/company/codepanda/",
-                "thumbnail": "/codepanda.png"
+                "thumbnail": "https://storage.googleapis.com/dicoding-gcloud/codepanda.png"
             },
             {
                 "organization": "Codepanda",
@@ -123,7 +123,7 @@
                 "state": "West Java",
                 "country": "Indonesia",
                 "url": "https://www.linkedin.com/company/codepanda/",
-                "thumbnail": "/codepanda.png"
+                "thumbnail": "https://storage.googleapis.com/dicoding-gcloud/codepanda.png"
             },
             {
                 "organization": "IPB University",
@@ -135,7 +135,7 @@
                 "state": "West Java",
                 "country": "Indonesia",
                 "url": "https://www.linkedin.com/company/ipb-university/",
-                "thumbnail": "/ipb.jfif"
+                "thumbnail": "https://storage.googleapis.com/dicoding-gcloud/ipb.jfif"
             }
         ],
         "Volunteer Experience": [
@@ -149,7 +149,7 @@
                 "state": "West Java",
                 "country": "Indonesia",
                 "url": "https://www.linkedin.com/company/it-today-ipb/",
-                "thumbnail": "/ittoday.jfif"
+                "thumbnail": "https://storage.googleapis.com/dicoding-gcloud/ittoday.jfif"
             },
             {
                 "organization": "Himpunan Mahasiswa Ilmu Komputer Institut Pertanian Bogor",
@@ -161,7 +161,7 @@
                 "state": "West Java",
                 "country": "Indonesia",
                 "url": "https://www.linkedin.com/company/himalkomipb/",
-                "thumbnail": "/himalkomipb.jfif"
+                "thumbnail": "https://storage.googleapis.com/dicoding-gcloud/himalkomipb.jfif"
             },
             {
                 "organization": "IPB's Informatics Innovation Festival (ICONFEST)",
@@ -173,7 +173,7 @@
                 "state": "West Java",
                 "country": "Indonesia",
                 "url": "https://www.linkedin.com/company/ipb-s-informatics-competition-icon/",
-                "thumbnail": "/icon.jfif"
+                "thumbnail": "https://storage.googleapis.com/dicoding-gcloud/icon.jfif"
             },
             {
                 "organization": "IEEE IPB Student Branch",
@@ -185,13 +185,13 @@
                 "state": "West Java",
                 "country": "Indonesia",
                 "url": "https://www.linkedin.com/company/ieeesbipb/",
-                "thumbnail": "/ieeesbipb.jfif"
+                "thumbnail": "https://storage.googleapis.com/dicoding-gcloud/ieeesbipb.jfif"
             }
         ]
     },
     "about": {
         "description": "I am a software engineer with a significant interest in Web and Mobile Application Development. I enjoy being involved in many projects to improve my technical proficiency and gaining relevant experience in the information technology industry. I love to learn new things and share them with other people, especially on software development topics.",
-        "picture": "/profile.jpg",
+        "picture": "https://storage.googleapis.com/dicoding-gcloud/profile.jpg",
         "social": [
             {
                 "alt": "muhammd_fakhri",
