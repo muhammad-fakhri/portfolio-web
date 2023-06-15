@@ -1,38 +1,45 @@
-import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
-import { name } from '../data.json'
+import Document, { Head, Html, Main, NextScript } from 'next/document';
+import React from 'react';
+import data from '../data.json';
+
+const name = data.name;
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en" style={{ overflowX: "hidden" }}>
+      <Html lang="en" style={{ overflowX: 'hidden' }}>
         <Head>
-          <meta charSet='utf-8' />
+          <meta charSet="utf-8" />
           {/* PWA primary color */}
           <meta name="theme-color" content="black" />
-          <meta name="description" content={`Portfolio of ${name}`}/>
-          <meta name='keywords' content={'Portfolio ' + name + ' skills projects experience resume'} />
+          <meta name="description" content={`Portfolio of ${name}`} />
+          <meta
+            name="keywords"
+            content={'Portfolio ' + name + ' skills projects experience resume'}
+          />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
-          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
-          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
-          <link rel="manifest" href="/manifest.webmanifest"></link>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-3S0X8Y5X3J"></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-  
-              gtag('config', 'G-3S0X8Y5X3J');
-              `
-            }}
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
           />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+          />
+          <link rel="manifest" href="/manifest.webmanifest"></link>
         </Head>
         <body>
           <Main />
@@ -82,6 +89,9 @@ MyDocument.getInitialProps = async (ctx) => {
   return {
     ...initialProps,
     // Styles fragment is rendered after the app and page rendering finish.
-    styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()],
+    styles: [
+      ...React.Children.toArray(initialProps.styles),
+      sheets.getStyleElement(),
+    ],
   };
 };

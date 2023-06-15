@@ -1,68 +1,84 @@
+import {
+  AppBar,
+  Container,
+  IconButton,
+  makeStyles,
+  Toolbar,
+  Typography,
+  useScrollTrigger,
+} from '@material-ui/core';
 import React, { useContext } from 'react';
-import { AppBar, Container, IconButton, makeStyles, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
-import { ThemeContext } from '../src/theme';
-import Landing from '../src/Landing';
-import Skills from '../src/Skills';
-import Projects from '../src/Projects';
-import Experience from '../src/Experience';
+import data from '../data.json';
 import About from '../src/About';
-import { name, projects } from '../data.json';
+import Experience from '../src/Experience';
+import Landing from '../src/Landing';
+import Projects from '../src/Projects';
+import Skills from '../src/Skills';
+import { ThemeContext } from '../src/theme';
 
-const useStyles = makeStyles(theme => ({
+const name = data.name;
+const projects = data.projects;
+
+const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   appBar: {
-    boxShadow: "none",
-  }
-}))
+    boxShadow: 'none',
+  },
+}));
 
 export async function getStaticProps() {
-  const baseURI = projects.baseURI
-  const repos = projects.repositories
+  const baseURI = projects.baseURI;
+  const repos = projects.repositories;
   const reqInit = {
-    headers: { 
-      'Authorization': `token ${process.env.PAT}`
-    }
-  }
+    headers: {
+      Authorization: `token ${process.env.PAT}`,
+    },
+  };
   const fullRepoData = await Promise.allSettled(
-    repos.map(
-      async name => {
-        const repo = await fetch(baseURI + name, reqInit).then(res => res.json());
-        const langs = await fetch(baseURI + name + "/languages", reqInit).then(res => res.json())
-        return {
-          ...repo,
-          languages: Object.getOwnPropertyNames(langs)
-        };
-      }
-    )
+    repos.map(async (name) => {
+      const repo = await fetch(baseURI + name, reqInit).then((res) =>
+        res.json()
+      );
+      const langs = await fetch(baseURI + name + '/languages', reqInit).then(
+        (res) => res.json()
+      );
+      return {
+        ...repo,
+        languages: Object.getOwnPropertyNames(langs),
+      };
+    })
   );
 
   return {
     props: {
-      projects: fullRepoData
+      projects: fullRepoData,
     },
-    revalidate: 60
-  }
+    revalidate: 60,
+  };
 }
 
 export default function Index({ projects }) {
+  const classes = useStyles();
 
-  const classes = useStyles()
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
-  const { theme, toggleTheme } = useContext(ThemeContext)
-
-  const trigger = useScrollTrigger({ disableHysteresis: true })
+  const trigger = useScrollTrigger({ disableHysteresis: true });
 
   return (
     <div className={classes.root}>
-      <AppBar color={!trigger ? "transparent" : "inherit"} className={classes.appBar} position="fixed">
+      <AppBar
+        color={!trigger ? 'transparent' : 'inherit'}
+        className={classes.appBar}
+        position="fixed"
+      >
         <Toolbar>
           <Typography variant="h6" className={classes.root}>
-            { name }
+            {name}
           </Typography>
           <IconButton edge="end" color="inherit" onClick={toggleTheme}>
-            {theme.palette.type === "dark" ? "☀️" : "🌑"}
+            {theme.palette.type === 'dark' ? '☀️' : '🌑'}
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -70,9 +86,9 @@ export default function Index({ projects }) {
       <Container>
         <Landing />
         <Skills />
-        <Projects data={projects}/>
-        <Experience/>
-        <About/>
+        <Projects data={projects} />
+        <Experience />
+        <About />
       </Container>
     </div>
   );
