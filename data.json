@@ -35,8 +35,6 @@
       "C++",
       "C",
       "Go",
-      "HTML5",
-      "CSS3",
       "JavaScript",
       "TypeScript"
     ],
@@ -54,7 +52,9 @@
         "alt": "Material-UI",
         "icon": "materialui"
       },
-      "Bootstrap"
+      "Bootstrap",
+      "HTML5",
+      "CSS3"
     ],
     "Backend, Database and Cloud": [
       {
@@ -70,28 +70,20 @@
       "MySQL",
       "MariaDB",
       "PostgreSQL",
-      {
-        "alt": "Spring Boot",
-        "icon": "springboot"
-      },
-      {
-        "alt": "Google Cloud",
-        "icon": "googlecloud"
-      },
+      "SpringBoot",
+      "GoogleCloud",
       "Heroku",
       "Firebase",
       "Docker",
-      "Kubernetes"
+      "Kubernetes",
+      "ApacheKafka",
+      "RabbitMQ",
+      "Grafana",
+      "Elastic",
+      "ElasticStack",
+      "NewRelic"
     ],
-    "Mobile": [
-      "Android",
-      {
-        "alt": "Android Studio",
-        "icon": "androidstudio"
-      },
-      "Ionic",
-      "Flutter"
-    ]
+    "Mobile": ["Android", "androidstudio", "Ionic", "Flutter"]
   },
   "projects": {
     "baseURI": "https://api.github.com/repos/muhammad-fakhri/",
@@ -183,12 +175,24 @@
         "role": "Software Engineer",
         "type": "Full-time",
         "startDate": "2021-04-01",
-        "endDate": "",
+        "endDate": "2022-08-29",
         "city": "Central Jakarta",
         "state": "Greater Jakarta",
         "country": "Indonesia",
         "url": "https://www.linkedin.com/company/shopee/",
         "thumbnail": "/shopee.jfif"
+      },
+      {
+        "organization": "GoTo Financial",
+        "role": "Software Engineer",
+        "type": "Full-time",
+        "startDate": "2022-09-05",
+        "endDate": "",
+        "city": "Central Jakarta",
+        "state": "Greater Jakarta",
+        "country": "Indonesia",
+        "url": "https://www.linkedin.com/company/gotofinancial",
+        "thumbnail": "/gotofinancial.jfif"
       }
     ],
     "Volunteer Experience": [
