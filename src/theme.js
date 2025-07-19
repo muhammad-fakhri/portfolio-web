@@ -1,21 +1,21 @@
-import { createMuiTheme } from "@material-ui/core";
+import { createTheme } from "@mui/material/styles";
 import { createContext, useState } from "react";
 import { theme } from "../data.json";
 
-const lightTheme = createMuiTheme(
+const lightTheme = createTheme(
   (theme && theme.light && Object.keys(theme.light).length > 0) ? theme.light :
   {
     palette: {
-      type: "light"
+      mode: "light"
     }
   }
 )
 
-const darkTheme = createMuiTheme(
+const darkTheme = createTheme(
   (theme && theme.dark && Object.keys(theme.dark).length > 0) ? theme.dark :
   {
     palette: {
-      type: "dark"
+      mode: "dark"
     }
   }
 )

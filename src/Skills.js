@@ -1,14 +1,15 @@
-import { Avatar, Fade, Grid, Hidden, makeStyles, Tooltip, Typography, useMediaQuery, useTheme, Zoom } from "@material-ui/core";
-import Cancel from "@material-ui/icons/Cancel";
+import { Avatar, Fade, Grid, Hidden, Tooltip, Typography, useMediaQuery, useTheme, Zoom } from "@mui/material";
+import Cancel from "@mui/icons-material/Cancel";
 import clsx from "clsx";
 import Image from 'next/image'
 import { useEffect, useRef, useState } from "react";
-import simpleIcons from 'simple-icons'
+import * as simpleIcons from 'simple-icons'
 import { skills } from '../data.json'
 import { iconify } from "./util";
 
 const wrapper = (sk = []) => sk.map(v => {
-    const ic = simpleIcons.get(typeof v === "string" ? iconify(v) : iconify(v.icon)) || {
+    const iconKey = typeof v === "string" ? iconify(v) : iconify(v.icon);
+    const ic = simpleIcons[iconKey] || {
         title: v,
         hex: '424242',
         component: <Cancel />
@@ -28,31 +29,7 @@ Object.getOwnPropertyNames(skills).forEach(type => {
     wrappedSkills[type] = wrapper(skills[type])
 })
 
-let iobj = {}
-Object.values(wrappedSkills).forEach(oarr => {
-    oarr.forEach(({ backgroundColor, alt }) => {
-        iobj[alt] = { backgroundColor }
-    })
-})
-
-const useStyles = makeStyles(theme => ({
-    cont: {
-        minHeight: `calc(100vh - ${theme.spacing(4)}px)`,
-    },
-    skobj: {
-        marginBottom: theme.spacing(4)
-    },
-    avatar: {
-        height: theme.spacing(7),
-        width: theme.spacing(7),
-        padding: theme.spacing(1.5)
-    },
-    ...iobj
-}))
-
 export default function Skills() {
-
-    const classes = useStyles()
     const theme = useTheme()
     const mdDown = useMediaQuery(theme.breakpoints.down('md'))
     const align = mdDown ? "center" : "flex-end"
@@ -71,7 +48,13 @@ export default function Skills() {
     }, [])
 
     return (
-        <Grid container justify="center" alignItems="center" spacing={10} className={classes.cont}>
+        <Grid 
+            container 
+            justifyContent="center" 
+            alignItems="center" 
+            spacing={10} 
+            sx={{ minHeight: 'calc(100vh - 32px)' }}
+        >
             <Grid item xs={12} lg={6} ref={animRef}>
                 <Typography variant="h2" gutterBottom align="center">
                     Skills
@@ -82,8 +65,8 @@ export default function Skills() {
                             <Image
                                 alt="Skills"
                                 src="/skill.svg"
-                                width="1139"
-                                height="655"
+                                width={1139}
+                                height={655}
                             />
                         </div>
                     </Fade>
@@ -92,17 +75,25 @@ export default function Skills() {
             <Grid container item xs={12} lg={6} direction="column" spacing={1} alignItems={align}>
                 {
                     Object.getOwnPropertyNames(wrappedSkills).map((title, id) =>
-                        <Grid item key={id} className={classes.skobj}>
+                        <Grid item key={id} sx={{ marginBottom: 4 }}>
                             <Typography variant="h4" align={textAlign} gutterBottom component="p">
                                 {title}
                             </Typography>
-                            <Grid container item direction="row" spacing={1} justify="center">
+                            <Grid container item direction="row" spacing={1} justifyContent="center">
                                 {
-                                    wrappedSkills[title].map(({ alt, icon }, i) =>
+                                    wrappedSkills[title].map(({ alt, icon, backgroundColor }, i) =>
                                         <Grid item key={i}>
                                             <Zoom in={animate} style={{ transitionDelay: `${150 * i}ms` }}>
                                                 <Tooltip title={alt.replace("_", " ")} placement="top">
-                                                    <Avatar variant="rounded" className={clsx([classes.avatar, classes[alt]])}>
+                                                    <Avatar 
+                                                        variant="rounded" 
+                                                        sx={{
+                                                            height: 56,
+                                                            width: 56,
+                                                            padding: 1.5,
+                                                            backgroundColor
+                                                        }}
+                                                    >
                                                         {icon}
                                                     </Avatar>
                                                 </Tooltip>

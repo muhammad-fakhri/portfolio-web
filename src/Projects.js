@@ -1,25 +1,9 @@
-import { Card, CardActionArea, CardActions, CardContent, CardHeader, Chip, Fade, Grid, Hidden, makeStyles, Typography } from "@material-ui/core";
+import { Card, CardActionArea, CardActions, CardContent, CardHeader, Chip, Fade, Grid, Hidden, Typography } from "@mui/material";
 import { RepoForkedIcon, RepoIcon, StarIcon } from '@primer/octicons-react';
 import Image from 'next/image'
 import { useEffect, useRef, useState } from "react";
 
-const useStyles = makeStyles(theme => ({
-    cont: {
-        minHeight: `calc(100vh - ${theme.spacing(4)}px)`,
-    },
-    card: {
-        height: '100%'
-    },
-    cardActionArea: {
-        height: '100%',
-        // display: 'grid'
-    }
-}))
-
 export default function Projects({ data }) {
-
-    const classes = useStyles()
-
     const [animate, setAnimate] = useState(false)
     const animRef = useRef()
 
@@ -33,9 +17,16 @@ export default function Projects({ data }) {
     }, [])
 
     return (
-        <Grid direction="row-reverse" container justify="center" alignItems="center" spacing={10} className={classes.cont}>
+        <Grid 
+            direction="row-reverse" 
+            container 
+            justifyContent="center" 
+            alignItems="center" 
+            spacing={10} 
+            sx={{ minHeight: 'calc(100vh - 32px)' }}
+        >
             <Grid item xs={12} lg={6}>
-                <Typography variant="h2" gutterBottom align="center" innerRef={animRef}>
+                <Typography variant="h2" gutterBottom align="center" ref={animRef}>
                     Projects
                 </Typography>
                 <Hidden mdDown>
@@ -44,8 +35,8 @@ export default function Projects({ data }) {
                             <Image
                                 alt="Projects"
                                 src="/projects.svg"
-                                width="1144"
-                                height="617.32"
+                                width={1144}
+                                height={617}
                             />
                         </div>
                     </Fade>
@@ -56,9 +47,9 @@ export default function Projects({ data }) {
                     !!data && data.map((v, i) =>
                         <Grid item sm={6} xs={12} key={i}>
                             <Fade in={animate} style={{ transitionDelay: `${200 * i}ms` }}>
-                                <Card key={i} className={classes.card}>
+                                <Card sx={{ height: '100%' }}>
                                     <CardActionArea
-                                        className={classes.cardActionArea}
+                                        sx={{ height: '100%' }}
                                         href={v.value.html_url}
                                         target="_blank"
                                         rel="noopener noreferrer"

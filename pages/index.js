@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { AppBar, Container, IconButton, makeStyles, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
+import { AppBar, Container, IconButton, Toolbar, Typography, useScrollTrigger } from '@mui/material';
 import { ThemeContext } from '../src/theme';
 import Landing from '../src/Landing';
 import Skills from '../src/Skills';
@@ -7,15 +7,6 @@ import Projects from '../src/Projects';
 import Experience from '../src/Experience';
 import About from '../src/About';
 import { name, projects } from '../data.json';
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1
-  },
-  appBar: {
-    boxShadow: "none",
-  }
-}))
 
 export async function getStaticProps() {
   const baseURI = projects.baseURI
@@ -47,26 +38,26 @@ export async function getStaticProps() {
 }
 
 export default function Index({ projects }) {
-
-  const classes = useStyles()
-
   const { theme, toggleTheme } = useContext(ThemeContext)
-
   const trigger = useScrollTrigger({ disableHysteresis: true })
 
   return (
-    <div className={classes.root}>
-      <AppBar color={!trigger ? "transparent" : "inherit"} className={classes.appBar} position="fixed">
+    <div style={{ flexGrow: 1 }}>
+      <AppBar 
+        color={!trigger ? "transparent" : "inherit"} 
+        sx={{ boxShadow: "none" }} 
+        position="fixed"
+      >
         <Toolbar>
-          <Typography variant="h6" className={classes.root}>
+          <Typography variant="h6" sx={{ flexGrow: 1 }}>
             { name }
           </Typography>
           <IconButton edge="end" color="inherit" onClick={toggleTheme}>
-            {theme.palette.type === "dark" ? "☀️" : "🌑"}
+            {theme.palette.mode === "dark" ? "☀️" : "🌑"}
           </IconButton>
         </Toolbar>
       </AppBar>
-      <Toolbar className={classes.toolbar} />
+      <Toolbar />
       <Container>
         <Landing />
         <Skills />

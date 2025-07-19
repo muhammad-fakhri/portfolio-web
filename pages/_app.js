@@ -1,29 +1,31 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
-import { MuiThemeProvider } from '@material-ui/core';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
+import { CacheProvider } from '@emotion/react';
+import CssBaseline from '@mui/material/CssBaseline';
+import createEmotionCache from '../src/createEmotionCache';
 import { ThemeContext, ThemeProvider } from '../src/theme';
 
-function ThemeConsumer({ Component, pageProps }) {
+// Client-side cache, shared for the whole session of the user in the browser.
+const clientSideEmotionCache = createEmotionCache();
+
+function ThemeConsumer({ Component, pageProps, emotionCache = clientSideEmotionCache }) {
   const { theme } = useContext(ThemeContext)
-  return <MuiThemeProvider theme={theme}>
-    {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-    <CssBaseline />
-    <Component {...pageProps} />
-  </MuiThemeProvider>
+  return (
+    <CacheProvider value={emotionCache}>
+      <MuiThemeProvider theme={theme}>
+        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        <CssBaseline />
+        <Component {...pageProps} />
+      </MuiThemeProvider>
+    </CacheProvider>
+  )
 }
 
 export default function MyApp(props) {
-
-  React.useEffect(() => {
-    // Remove the server-side injected CSS.
-    const jssStyles = document.querySelector('#jss-server-side');
-    if (jssStyles) {
-      jssStyles.parentElement.removeChild(jssStyles);
-    }
-  }, []);
-
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  
   return (
     <React.Fragment>
       <Head>
@@ -31,7 +33,7 @@ export default function MyApp(props) {
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider>
-        <ThemeConsumer {...props}/>
+        <ThemeConsumer Component={Component} pageProps={pageProps} emotionCache={emotionCache} />
       </ThemeProvider>
     </React.Fragment>
   );

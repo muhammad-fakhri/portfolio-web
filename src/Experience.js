@@ -1,26 +1,8 @@
-import { Avatar, Card, CardActionArea, CardHeader, Fade, Grid, Hidden, makeStyles, Typography, useMediaQuery, useTheme } from "@material-ui/core";
+import { Avatar, Card, CardActionArea, CardHeader, Fade, Grid, Hidden, Typography, useMediaQuery, useTheme } from "@mui/material";
 import Image from 'next/image'
-import { DateRange, LocationCity } from '@material-ui/icons';
+import { DateRange, LocationCity } from '@mui/icons-material';
 import { experience } from '../data.json'
 import { useEffect, useRef, useState } from "react";
-
-const useStyles = makeStyles(theme => ({
-    cont: {
-        minHeight: `calc(100vh - ${theme.spacing(4)}px)`,
-    },
-    card: {
-        height: '100%',
-    },
-    cardHeader: {
-        paddingTop: 0
-    },
-    cardActionArea: {
-        height: '100%',
-    },
-    expObj: {
-        marginBottom: theme.spacing(4)
-    }
-}))
 
 const getHumanDiff = (startDate, endDate) => {
     let str = ""
@@ -53,8 +35,6 @@ const getHumanDiff = (startDate, endDate) => {
 }
 
 export default function Experience() {
-
-    const classes = useStyles()
     const theme = useTheme()
     const mdDown = useMediaQuery(theme.breakpoints.down('md'))
     const align = mdDown ? "center" : "flex-end"
@@ -73,7 +53,14 @@ export default function Experience() {
     }, [])
 
     return (
-        <Grid direction="row" container justify="center" alignItems="center" spacing={10} className={classes.cont}>
+        <Grid 
+            direction="row" 
+            container 
+            justifyContent="center" 
+            alignItems="center" 
+            spacing={10} 
+            sx={{ minHeight: 'calc(100vh - 32px)' }}
+        >
             <Grid item xs={12} lg={6}>
                 <Typography variant="h2" gutterBottom align="center">
                     Experience
@@ -84,8 +71,8 @@ export default function Experience() {
                             <Image
                                 alt="Experience"
                                 src="/experience.svg"
-                                width="996.46"
-                                height="828.18"
+                                width={996}
+                                height={828}
                             />
                         </div>
                     </Fade>
@@ -94,11 +81,11 @@ export default function Experience() {
             <Grid container item xs={12} lg={6} direction="column" spacing={1} alignItems={align}>
                 {
                     Object.getOwnPropertyNames(experience).map((title, id) =>
-                        <Grid item key={id} className={classes.expObj}>
+                        <Grid item key={id} sx={{ marginBottom: 4 }}>
                             <Typography variant="h4" align={textAlign} gutterBottom component="p">
                                 {title}
                             </Typography>
-                            <Grid container item direction="row" spacing={1} justify="center">
+                            <Grid container item direction="row" spacing={1} justifyContent="center">
                                 {
                                     experience[title].map(({
                                         organization,
@@ -114,9 +101,9 @@ export default function Experience() {
                                     }, i) =>
                                         <Grid item xs={12} sm key={i}>
                                             <Fade in={animate} style={{ transitionDelay: `${200 * i}ms` }}>
-                                                <Card className={classes.card}>
+                                                <Card sx={{ height: '100%' }}>
                                                     <CardActionArea
-                                                        className={classes.cardActionArea}
+                                                        sx={{ height: '100%' }}
                                                         href={url}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
@@ -138,12 +125,12 @@ export default function Experience() {
                                                             avatar={<DateRange />}
                                                             title={getHumanDiff(startDate, endDate)}
                                                             subheader={`${startDate} - ${endDate}`}
-                                                            className={classes.cardHeader}
+                                                            sx={{ paddingTop: 0 }}
                                                         />
                                                         <CardHeader
                                                             avatar={<LocationCity />}
                                                             subheader={`${city}, ${state}, ${country}`}
-                                                            className={classes.cardHeader}
+                                                            sx={{ paddingTop: 0 }}
                                                         />
                                                     </CardActionArea>
                                                 </Card>
